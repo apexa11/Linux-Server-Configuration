@@ -203,7 +203,7 @@ Now, you can check your database connection by following commands:
 ## Restart Apache
 1. Restart Apache `sudo service apache2 restart `
 
-If you are getting Internal server error, You can access the Apache error log file. To view the last 30 lines in the error log,you have to use following command
+## If you are getting Internal server error, You can access the Apache error log file. To view the last 30 lines in the error log,you have to use following command
  sudo tail -30 /var/log/apache2/error.log
 
 ## K - Get OAUTH-LOGINS (Google+ and Facebook) working.
@@ -223,13 +223,10 @@ open(r'/var/www/Catalog/catalog/g_client_secret.json', 'r').read())['web']['clie
 oauth_flow:flow_from_clientsecrets('/var/www/FLaskApp/FlaskApp/g_client_secret.json', scope='')
 Do the same thing for the fb_client_secret.json file. This is to enable apache locate the file through the proper path.
 
-If you are
+2. If you are Go to http://www.hcidata.info/host2ip.cgi to recieve the Host Name for your PUBLIC-IP-ADDRESS. The Host Name for mine : 13.59.131.173 is ec2-13-59-131.173.us-west-2.compute.amazonaws.com
 
-Go to http://www.hcidata.info/host2ip.cgi to recieve the Host Name for your PUBLIC-IP-ADDRESS. The Host Name for mine : 13.59.131.173 is ec2-13-59-131.173.us-west-2.compute.amazonaws.com
-
-Open Apache catalog.conf file.
-
- grader@ip-10-20-30-101:/var/www/FlaskApp/FlaskApp$ sudo nano /etc/apache2/sites-available/FlaskApp.conf
+3. Open Apache catalog.conf file.
+Ugrader@ip-10-20-30-101:/var/www/FlaskApp/FlaskApp$ sudo nano /etc/apache2/sites-available/FlaskApp.conf
 Paste this in the nano editor for catalog.conf: ServerAlias ec2-13-59-131.173.us-west-2.compute.amazonaws.com
 
 <VirtualHost *:80>
