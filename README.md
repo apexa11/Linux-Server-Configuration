@@ -249,7 +249,7 @@ Paste this in the nano editor for catalog.conf: ServerAlias ec2-13-59-131.173.us
 </VirtualHost>
 Enable virtual host - catalog.conf
 
-(venv) grader@ip-10-20-30-101:/var/www/FlaskApp/FlaskApp$ sudo a2ensite catalog
+4. grader@ip-10-20-30-101:/var/www/FlaskApp/FlaskApp$ sudo a2ensite catalog
 To get Google+ authorization working, do this:
 
 (a) - On the Developer Console: http://console.developers.google.com, select your Project.
@@ -258,15 +258,15 @@ To get Google+ authorization working, do this:
 
 #oauth2
 
-To get Facebook authorization working, do this:
+5. To get Facebook authorization working, do this:
 
 (a) - Go to Facebook developers page: `https://developers.facebook.com/apps and select your app.
 
 (b) - Go to settings and fill in your PUBLIC-IP-ADDRESS like so:
 
-facebook oauth
+# facebook oauth
 
-You can install Monitor application:
+6. You can install Monitor application:
 
  grader@ip-10-20-30-101:/var/www/FLaskApp/FlaskApp$ sudo apt-get install python-pip build-essential python-dev
  grader@ip-10-20-30-101:/var/www/FlaskApp/FlaskApp$ sudo pip install Glancers
@@ -274,28 +274,28 @@ L - Install and Configured Fail2ban intrusion protection that bans suspicious IP
 
 #Reference: DigitalOcean
 
-Install Fail2ban application:
+7. Install Fail2ban application:
 grader@ip-10-20-30-101:~$ sudo apt-get install fail2ban
 
-Copy the default config file
+8. Copy the default config file
 grader@ip-10-20-30-101:~$ sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 
-Open jail.local and change the followinf default parameters:
+9. Open jail.local and change the followinf default parameters:
 grader@ip-10-20-30-101:~$ sudo nano /etc/fail2ban/jail.local
-Set the following parameters:
 
+10. Set the following parameters:
 set bantime = 1600
 destemail = YOURNAME@DOMAIN or YOUR-EMAIL
 action = %(action_mwl)s
 under [ssh] change port = 2200
 
-Stop the service:
+11. Stop the service:
 grader@ip-10-20-30-101:~$ sudo service fail2ban stop
 Start the service again:
 
-grader@ip-10-20-30-101:~$ sudo service fail2ban start
+12. grader@ip-10-20-30-101:~$ sudo service fail2ban start
 
-FINALLY:
+13. FINALLY:
 Restart apache2 server, run your app on amazonaws.
 
 ## References:
