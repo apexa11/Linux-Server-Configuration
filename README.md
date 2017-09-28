@@ -72,7 +72,7 @@ You can visit http://13.59.131.173/ for the website deployed.
 	sudo apt-get upgrade
 
 ## Change the SSH port from 22 to 2200
-1. Use `sudo vim /etc/ssh/sshd_config` and then change Port 22 to Port 2200 , save & quit.
+1. Use `sudo nano /etc/ssh/sshd_config` and then change Port 22 to Port 2200 , save & quit.
 2. Reload SSH using `sudo service ssh restart`
 
 ## Configure the Uncomplicated Firewall (UFW)
@@ -131,7 +131,7 @@ Now, check ufw status:
 2. Use `cd /var/www` to move to the /var/www directory 
 3. Create the application directory `sudo mkdir FlaskApp`
 4. Move inside this directory using `cd FlaskApp`
-5. Clone the Catalog App to the virtual machine `git clone https://github.com/kongling893/Item_Catalog_UDACITY.git`
+5. Clone the Catalog App to the virtual machine `git clone https://github.com/apexa11/Restaurant_Menu-App.git`
 6. Rename the project's name `sudo mv ./Restaurant_Menu-App ./FlaskApp`
 7. Move to the inner FlaskApp directory using `cd FlaskApp`
 8. Rename `project.py` to `__init__.py` using `sudo mv project.py __init__.py`
