@@ -4,7 +4,8 @@ This is the fifth project for "Full Stack Web Developer Nanodegree" on Udacity.
 In this project, a Linux virtual machine needs to be configurated to support the My Restaurant website.
 
 You can visit my website here: http://13.59.131.173/ 
-AWS- Server : ec2-13-59-131.173.us-west-2.compute.amazonaws.com.
+
+AWS- Server : http://ec2-13-59-131.173.us-west-2.compute.amazonaws.com.
 
 ## Tasks
 1. Launch your Virtual Machine with your Udacity account
